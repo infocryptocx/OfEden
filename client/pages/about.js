@@ -66,8 +66,8 @@ const About = () => {
         </div>
 
         <div className="px-6 py-8">
-          <h1 className="text-3xl text-center mb-3 font-semibold text-red-300 capitalize lg:text-4xl ">
-            What's in Eden?
+          <h1 className="text-3xl text-center mb-3 font-semibold text-red-300 capitalize lg:text-4xl">
+            Whats in Eden?
           </h1>
           <p className="mt-4 text-2xl mb-2 text-gray-500 xl:mt-6 dark:text-gray-300">
             All IP created by, or donated to, CryptoWorld.Tips including, but

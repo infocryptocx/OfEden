@@ -61,8 +61,7 @@ const index = ({ posts, audios, videos }) => {
                 <img
                   className="w-full h-full"
                   src="/cw1.JPG"
-                  alt="Avatar"
-                  alt="Catalogue-pana.svg"
+                  alt="audioChain"
                 />
               </a>
             </Link>
@@ -72,19 +71,13 @@ const index = ({ posts, audios, videos }) => {
                 <img
                   className="w-full h-full"
                   src="/cw2.JPG"
-                  alt="Avatar"
-                  alt="Catalogue-pana.svg"
+                  alt="videoChain"
                 />
               </a>
             </Link>
             <Link href="/allposts">
               <a>
-                <img
-                  className="w-full h-full"
-                  src="/cw3.JPG"
-                  alt="Avatar"
-                  alt="Catalogue-pana.svg"
-                />
+                <img className="w-full h-full" src="/cw3.JPG" alt="DoxChain" />
               </a>
             </Link>
           </div>
