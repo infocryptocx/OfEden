@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.6.5",
     "@heroicons/react": "^1.0.6",
+    "@mux/mux-player-react": "^0.1.0-beta.23",
     "@sanity/asset-utils": "^1.2.3",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^3.3.2",
@@ -25,7 +26,8 @@
     "react": "18.1.0",
     "react-audio-player": "^0.17.0",
     "react-dom": "18.1.0",
-    "react-h5-audio-player": "^3.8.4"
+    "react-h5-audio-player": "^3.8.4",
+    "sanity-mux-player": "^0.0.27"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",

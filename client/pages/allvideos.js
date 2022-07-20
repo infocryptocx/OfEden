@@ -5,6 +5,7 @@ import MainLayout from "../components/MainLayout";
 import ReactAudioPlayer from "react-audio-player";
 import imageUrlBuilder from "@sanity/image-url";
 import { getFileAsset } from "@sanity/asset-utils";
+import MuxPlayer from "@mux/mux-player-react";
 
 import moment from "moment";
 
@@ -31,7 +32,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const AllAudios = ({ audios }) => {
+const AllVideos = ({ audios }) => {
   const [title, setTitle] = useState("");
 
   // the search result
@@ -95,9 +96,14 @@ const AllAudios = ({ audios }) => {
                   {audio.categories[0]}
                 </h2>
 
-                <ReactAudioPlayer
-                  src={getFileAsset(audio.audio, client.config()).url}
-                  controls
+                <MuxPlayer
+                  streamType="on-demand"
+                  playbackId="{PLAYBACK_ID}"
+                  // metadata={{
+                  //   video_id: "video-id-54321",
+                  //   video_title: "Test video title",
+                  //   viewer_user_id: "user-id-007",
+                  // }}
                 />
                 <div className="mt-4">
                   <div className="flex items-center">
@@ -134,4 +140,4 @@ const AllAudios = ({ audios }) => {
   );
 };
 
-export default AllAudios;
+export default AllVideos;

@@ -6,17 +6,13 @@ const HeroSection = () => {
       <div className="flex items-center justify-center w-full min-h-screen py-10 bg-black">
         <div className="w-full flex flex-col px-8 items-center justify-center">
           <p className="text-7xl text-center font-semibold text-white">
-            WELCOME TO CRYPTO WORLD
+            Welcome to Project Eden
           </p>
 
           <p className="mt-2 text-sm text-center px-8 text-gray-500 dark:text-gray-400 lg:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            CryptoWorld.Tips Presents: Project Eden. A Web3 Vault hosting the
+            Intellectual Property of CryptoWorld.Tips Accessible only to
+            Holders.
           </p>
 
           <div className="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
@@ -35,13 +31,6 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-      </div>
-      <div className="w-full">
-        <img
-          className="w-full bg-center bg-cover h-[40rem]"
-          src="/Discord.gif"
-          alt=""
-        />
       </div>
     </div>
   );

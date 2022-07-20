@@ -26,7 +26,7 @@ const MainNavbar = () => {
               />
               <Link href="/">
                 <a className="text-md ml-2 font-bold transition-colors duration-200 transform text-white lg:text-3xl hover:text-gray-300 dark:hover:text-gray-300">
-                  CRYPTOWORLD.TIPS
+                OfEden.888
                 </a>
               </Link>
             </div>
@@ -48,27 +48,105 @@ const MainNavbar = () => {
           <div className={"items-center md:flex" +
                 (navbarOpen ? " flex" : " hidden")}>
             {currentAccount ? (
-              <div className="flex flex-col md:flex-row">
-                <Link href="/">
+              <div className="flex flex-col md:flex-row items-center">
+                <Link href="/about">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
-                    Home
+                    About OfEden
                   </a>
                 </Link>
-                <Link href="/cryptohoodlumz">
+                <Link href="/mint">
+                  <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
+                    Marketplace
+                  </a>
+                </Link>
+                {/* <Link href="/cryptohoodlumz">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     CryptoHoodlumz
                   </a>
-                </Link>
-                <Link href="/community">
-                  <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
-                    Community
-                  </a>
-                </Link>
+                </Link> */}
+                <Menu as="div" className="relative inline-block text-left">
+                  <div>
+                    <Menu.Button className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
+                     Chains
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <div className="px-1 py-1 ">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link href="/allaudios">
+                              <a
+                                className={`${
+                                  active
+                                    ? "bg-red-900 text-white"
+                                    : "text-gray-900"
+                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                              >
+                                Audio Chain
+                              </a>
+                            </Link>
+                          )}
+                        </Menu.Item>
+                      </div>
+                      <div className="px-1 py-1 ">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link href="/allposts">
+                              <a
+                                className={`${
+                                  active
+                                    ? "bg-red-900 text-white"
+                                    : "text-gray-900"
+                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                              >
+                                Dox Chain
+                              </a>
+                            </Link>
+                          )}
+                        </Menu.Item>
+                      </div>
+                      <div className="px-1 py-1 ">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link href="/allvideos">
+                              <a
+                                className={`${
+                                  active
+                                    ? "bg-red-900 text-white"
+                                    : "text-gray-900"
+                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                              >
+                                Video Chain
+                              </a>
+                            </Link>
+                          )}
+                        </Menu.Item>
+                      </div>
+
+                     
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
                 <Link href="/members">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     Members
                   </a>
                 </Link>
+                <Link href="/community">
+                  <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
+                    Forumz
+                  </a>
+                </Link>
+                
                 {/* <Link href="/cwsubmissions">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     CW Submissions

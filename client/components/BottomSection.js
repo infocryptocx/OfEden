@@ -273,8 +273,7 @@ const BottomSection = () => {
       <section className="bg-red-900">
         <div className="py-10">
           <h1 className="text-lg font-semibold text-zinc-300 text-center lg:text-2xl">
-            Join the CryptoWorld.tips List and never miss <br /> out on new
-            tips, tutorials, and more.
+          Join the OfEden.888 Allow List to Stay In The Know on Tips, Tutorials, and More.
           </h1>
 
           <div className="flex justify-center mt-6">
@@ -287,7 +286,7 @@ const BottomSection = () => {
                   aria-label="Enter your email"
                 />
                 <button className="w-full px-3 py-2 m-1 text-sm font-medium tracking-wider text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded-md dark:hover:bg-gray-900 dark:bg-gray-700 lg:w-auto hover:bg-gray-700">
-                  subscribe
+                I WANT IN
                 </button>
               </div>
             </div>
