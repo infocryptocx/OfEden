@@ -112,6 +112,7 @@ const About = () => {
             </li>
             <li className="text-white">Or scanning here: </li>
           </ul>
+          <img className="w-64 h-64" src="/CHZ888.png" alt="videoChain" />
         </div>
       </div>
     </MainLayout>
