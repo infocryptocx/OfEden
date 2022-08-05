@@ -6,7 +6,7 @@ import { CryptoWorldContext } from "../context/context";
 import Image from "next/image";
 
 const MainNavbar = () => {
-  const { currentUser, nftHolder, currentAccount, connectWallet, logout } =
+  const { currentUser, nftHolder, currentAccount, connectWallet } =
     useContext(CryptoWorldContext);
 
   const [navbarOpen, setNavbarOpen] = React.useState(false);
