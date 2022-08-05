@@ -245,7 +245,6 @@ export const CryptoWorldProvider = ({ children }) => {
         connectWallet,
         currentUser,
         nftHolder,
-        logout,
       }}
     >
       {children}
