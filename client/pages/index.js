@@ -50,7 +50,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const index = ({ posts, audios, videos }) => {
+const Home = ({ posts, audios, videos }) => {
   console.log(videos, "videos-----------");
   console.log(posts, "posts-----------");
   console.log(audios, "audios-----------");
@@ -124,4 +124,4 @@ const index = ({ posts, audios, videos }) => {
   );
 };
 
-export default index;
+export default Home;
