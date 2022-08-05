@@ -108,7 +108,9 @@ const About = () => {
               this time.
             </li>
             <li className="text-white">
-              If Available, Listings Can be Found Here: https://bit.ly/CHZ888
+              If Available, Listings Can be Found Here:{" "}
+              <a href="https://bit.ly/CHZ888">https://bit.ly/CHZ888</a>
+              https://bit.ly/CHZ888
             </li>
             <li className="text-white">Or scanning here: </li>
           </ul>

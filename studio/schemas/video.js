@@ -5,9 +5,21 @@ export default {
   fields: [
     { title: "Title", name: "title", type: "string" },
     {
-      title: "Video file",
-      name: "video",
-      type: "mux.video",
+      name: "videoWithDetatils",
+      title: "Video (with details)",
+      type: "object",
+      fields: [
+        {
+          name: "video",
+          title: "Video",
+          type: "mux.video",
+        },
+        {
+          name: "caption",
+          title: "Caption",
+          type: "string",
+        },
+      ],
     },
     { title: "Description", name: "description", type: "string" },
     {

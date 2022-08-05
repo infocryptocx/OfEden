@@ -4,7 +4,7 @@ import { client } from "../lib/client";
 import imageUrlBuilder from "@sanity/image-url";
 import moment from "moment";
 import SanityMuxPlayer from "sanity-mux-player";
-import { getFile } from "@sanity/asset-utils";
+import MuxPlayer from "@mux/mux-player-react";
 
 const builder = imageUrlBuilder(client);
 
@@ -22,7 +22,7 @@ export default function RecentVideos({ videos }) {
               className="w-10/12 mx-2 overflow-hidden rounded-lg shadow-md bg-black xs:mx-auto"
               key={index}
             >
-              <SanityMuxPlayer
+              {/* <SanityMuxPlayer
                 assetDocument={video.video}
                 autoload={true | false}
                 // className={string}
@@ -30,15 +30,15 @@ export default function RecentVideos({ videos }) {
                 muted="false"
                 showControls="true"
                 width={100}
-              />
+              /> */}
 
               <div className="p-6">
                 <div>
-                  <h2 className="text-red-600 font-bold my-2">
+                  {/* <h2 className="text-red-600 font-bold my-2">
                     {video.categories[0]}
-                  </h2>
+                  </h2> */}
 
-                  <h1 className="block mt-2 text-2xl font-semibold transition-colors duration-200 transform text-white">
+                  <h1 className="block my-2 text-2xl font-semibold transition-colors duration-200 transform text-white">
                     {video.title}
                   </h1>
 
@@ -49,7 +49,7 @@ export default function RecentVideos({ videos }) {
 
                 <div className="mt-4">
                   <div className="flex items-center">
-                    <div className="flex items-center">
+                    {/* <div className="flex items-center">
                       <img
                         className="object-cover w-8 h-8 rounded-full"
                         src={urlFor(video.authorImage).url()}
@@ -58,10 +58,10 @@ export default function RecentVideos({ videos }) {
                       <p className="mx-2 font-semibold  text-gray-200">
                         {video.authorName}
                       </p>
-                    </div>
-                    <span className="text-md text-gray-300">
+                    </div> */}
+                    {/* <span className="text-md text-gray-300">
                       {moment(video.publishedAt).format("L")}
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               </div>

@@ -6,10 +6,10 @@ import { CryptoWorldContext } from "../context/context";
 import Image from "next/image";
 
 const MainNavbar = () => {
-  const { currentUser, currentAccount, connectWallet } =
+  const { currentUser, nftHolder, currentAccount, connectWallet, logout } =
     useContext(CryptoWorldContext);
 
-    const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   return (
     <nav className="shadow bg-black">
@@ -26,28 +26,31 @@ const MainNavbar = () => {
               />
               <Link href="/">
                 <a className="text-md ml-2 font-bold transition-colors duration-200 transform text-white lg:text-3xl hover:text-gray-300 dark:hover:text-gray-300">
-                OfEden.888
+                  OfEden.888
                 </a>
               </Link>
             </div>
 
             <button
-                className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-                type="button"
-                onClick={() => setNavbarOpen(!navbarOpen)}
-              >
-                <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-                    <path
-                      fillRule="evenodd"
-                      d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                    ></path>
-                  </svg>
-              </button>
+              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              type="button"
+              onClick={() => setNavbarOpen(!navbarOpen)}
+            >
+              <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+                <path
+                  fillRule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                ></path>
+              </svg>
+            </button>
           </div>
 
-          <div className={"items-center md:flex" +
-                (navbarOpen ? " flex" : " hidden")}>
-            {currentAccount ? (
+          <div
+            className={
+              "items-center md:flex" + (navbarOpen ? " flex" : " hidden")
+            }
+          >
+            {currentAccount && nftHolder ? (
               <div className="flex flex-col md:flex-row items-center">
                 <Link href="/about">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
@@ -67,7 +70,7 @@ const MainNavbar = () => {
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
                     <Menu.Button className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
-                     Chains
+                      Chains
                     </Menu.Button>
                   </div>
                   <Transition
@@ -131,8 +134,6 @@ const MainNavbar = () => {
                           )}
                         </Menu.Item>
                       </div>
-
-                     
                     </Menu.Items>
                   </Transition>
                 </Menu>
@@ -146,7 +147,7 @@ const MainNavbar = () => {
                     Forumz
                   </a>
                 </Link>
-                
+
                 {/* <Link href="/cwsubmissions">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     CW Submissions
@@ -204,6 +205,7 @@ const MainNavbar = () => {
                         <Menu.Item>
                           {({ active }) => (
                             <button
+                              onClick={() => logout()}
                               className={`${
                                 active
                                   ? "bg-red-900 text-white"
@@ -224,7 +226,7 @@ const MainNavbar = () => {
             )}
 
             <div className="flex flex-col md:flex-row md:mx-1">
-              {currentAccount ? (
+              {currentAccount && nftHolder ? (
                 // <div className="mr-5 bg-zinc-900 text-zinc-200 p-1 text-sm rounded-3xl border-2 border-bg-black flex items-center">
                 //   <img src="./eth.png" width={13} alt="ethLogo" />
                 //   <span className="mx-1 text-zinc-700">{"|"}</span>

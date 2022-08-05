@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import { client } from "../lib/client";
 import groq from "groq";
 import MainLayout from "../components/MainLayout";
-import ReactAudioPlayer from "react-audio-player";
 import imageUrlBuilder from "@sanity/image-url";
-import { getFileAsset } from "@sanity/asset-utils";
 import MuxPlayer from "@mux/mux-player-react";
-
 import moment from "moment";
 
 const builder = imageUrlBuilder(client);
@@ -16,7 +13,7 @@ function urlFor(source) {
 }
 
 export const getStaticProps = async () => {
-  const query = groq`{"audios": *[_type == 'audio']{title,audio,description,publishedAt,
+  const query = groq`{"videos": *[_type == 'video']{title,audio,description,publishedAt,
       'categories': categories[]->title,
       'authorName': author->name,
       'authorSlug': author->slug,
@@ -27,23 +24,23 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      audios: data.audios,
+      videos: data.videos,
     },
   };
 };
 
-const AllVideos = ({ audios }) => {
+const AllVideos = ({ videos }) => {
   const [title, setTitle] = useState("");
 
   // the search result
-  const [foundTitle, setFoundTitle] = useState(audios);
+  const [foundTitle, setFoundTitle] = useState(videos);
 
   const filter = (e) => {
     const keyword = e.target.value;
 
     if (keyword !== "") {
-      const results = audios.filter((audio) => {
-        return audio.title.toLowerCase().startsWith(keyword.toLowerCase());
+      const results = videos.filter((video) => {
+        return video.title.toLowerCase().startsWith(keyword.toLowerCase());
         // Use the toLowerCase() method to make it case-insensitive
       });
       setFoundTitle(results);
@@ -85,15 +82,15 @@ const AllVideos = ({ audios }) => {
         </div>
         <div className="grid grid-cols-1 gap-4 my-10">
           {foundTitle && foundTitle.length > 0 ? (
-            foundTitle.map((audio, index) => (
+            foundTitle.map((video, index) => (
               // {audios && audios.map((audio) => (
               <div
                 className="bg-black w-1/2 mx-auto px-5 py-4 rounded-lg"
                 key={index}
               >
-                <h2 className="text-white text-xl font-bold">{audio.title}</h2>
+                <h2 className="text-white text-xl font-bold">{video.title}</h2>
                 <h2 className="text-red-600 font-bold my-2">
-                  {audio.categories[0]}
+                  {video.categories[0]}
                 </h2>
 
                 <MuxPlayer
@@ -110,19 +107,19 @@ const AllVideos = ({ audios }) => {
                     <div className="flex items-center">
                       <img
                         className="object-cover w-8 h-8 rounded-full"
-                        src={urlFor(audio.authorImage).url()}
+                        src={urlFor(video.authorImage).url()}
                         alt="Article"
                       />
                       <p className="mx-2 font-semibold text-zinc-300">
-                        {audio.authorName}
+                        {video.authorName}
                       </p>
                       <p className="mx-1 text-white dark:text-zinc-300">
-                        {moment(audio.publishedAt).format("L")}
+                        {moment(video.publishedAt).format("L")}
                       </p>
                     </div>
                   </div>
                   <h2 className="text-white text-sm font-semibold my-3">
-                    {audio.description}
+                    {video.description}
                   </h2>
                 </div>
               </div>

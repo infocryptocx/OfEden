@@ -9,6 +9,7 @@ const Profile = () => {
   const [bio, setBio] = useState("");
   const [email, setEmail] = useState("");
   const [image, setImage] = useState(null);
+  const [status, setStatus] = useState("Update Profile");
   const [createObjectURL, setCreateObjectURL] = useState(null);
 
   const uploadImage = (event) => {
@@ -20,8 +21,18 @@ const Profile = () => {
     }
   };
 
+  useEffect(() => {
+    if (currentUser) {
+      setName(currentUser.name);
+      setBio(currentUser.bio);
+      setEmail(currentUser.email);
+      setUserName(currentUser.username);
+    }
+  }, [currentUser]);
+
   const updateProfile = async (e) => {
     e.preventDefault();
+    setStatus("Updating.....");
     const data = {
       name: name,
       username: username,
@@ -41,6 +52,7 @@ const Profile = () => {
     } catch (error) {
       console.error(error);
     }
+    window.location.reload();
   };
 
   return (
@@ -64,7 +76,7 @@ const Profile = () => {
               </p>
 
               <p className="py-2  text-gray-400">
-                {!currentUser ? "name" : currentUser.bio}
+                {!currentUser ? "bio" : currentUser.bio}
               </p>
 
               <div className="flex items-center text-red-900 mt-4 ">
@@ -105,7 +117,7 @@ const Profile = () => {
                 </svg>
 
                 <h1 className="px-2 text-sm text-white">
-                  {!currentUser ? "name" : currentUser.name}
+                  {!currentUser ? "name" : currentUser.username}
                 </h1>
               </div>
 
@@ -129,7 +141,7 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <div className="w-full max-w-2xl px-6 py-4 mx-auto rounded-md shadow-md bg-black">
+          <div className="w-full max-w-2xl px-6 py-4 my-4 mx-auto rounded-md shadow-md bg-black">
             <h2 className="text-3xl font-semibold text-center text-white">
               Update Profile
             </h2>
@@ -162,7 +174,8 @@ const Profile = () => {
                     className="block w-full px-4 py-2   border rounded-md bg-zinc-800 text-gray-300 border-gray-600 focus:border-red-400 focus:ring-red-300 dark:focus:border-red-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     type="text"
                     onChange={(e) => setName(e.target.value)}
-                    value={name}
+                    defaultValue={!currentUser ? "" : currentUser.name}
+                    setValue={name}
                   />
                 </div>
               </div>
@@ -192,7 +205,8 @@ const Profile = () => {
                     className="block w-full px-4 py-2   border rounded-md bg-zinc-800 text-gray-300 border-gray-600 focus:border-red-400 focus:ring-red-300 dark:focus:border-red-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     type="email"
                     onChange={(e) => setEmail(e.target.value)}
-                    value={email}
+                    defaultValue={!currentUser ? "" : currentUser.email}
+                    setValue={email}
                   />
                 </div>
               </div>
@@ -206,7 +220,8 @@ const Profile = () => {
                   name="bio"
                   className="block w-full h-40 px-4 py-2   border rounded-md bg-zinc-800 text-gray-300 border-gray-600 focus:border-red-400 dark:focus:border-red-300 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-40"
                   onChange={(e) => setBio(e.target.value)}
-                  value={bio}
+                  defaultValue={!currentUser ? "" : currentUser.bio}
+                  setValue={bio}
                 ></textarea>
               </div>
 
@@ -215,7 +230,7 @@ const Profile = () => {
                   className="px-4 py-2 my-3 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-red-900 rounded-md hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-80"
                   onClick={updateProfile}
                 >
-                  Update Profile
+                  {status}
                 </button>
               </div>
             </div>

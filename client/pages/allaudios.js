@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { client } from "../lib/client";
 import groq from "groq";
 import MainLayout from "../components/MainLayout";
@@ -7,6 +7,8 @@ import imageUrlBuilder from "@sanity/image-url";
 import { getFileAsset } from "@sanity/asset-utils";
 
 import moment from "moment";
+import { Router } from "next/router";
+import { CryptoWorldContext } from "../context/context";
 
 const builder = imageUrlBuilder(client);
 

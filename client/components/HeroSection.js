@@ -5,7 +5,7 @@ const HeroSection = () => {
     <div className=" min-h-screen">
       <div className="flex items-center justify-center w-full min-h-screen py-10 bg-black">
         <div className="w-full flex flex-col px-8 items-center justify-center">
-          <p className="text-7xl text-center font-semibold text-white">
+          <p className="text-7xl text-center uppercase font-semibold text-white">
             Welcome to Project Eden
           </p>
 

@@ -32,6 +32,6 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     blockContent,
     userSchema,
-    conversationSchema
+    conversationSchema,
   ]),
 });
