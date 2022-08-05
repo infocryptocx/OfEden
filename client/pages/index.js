@@ -51,9 +51,6 @@ export const getStaticProps = async () => {
 };
 
 const Home = ({ posts, audios, videos }) => {
-  console.log(videos, "videos-----------");
-  console.log(posts, "posts-----------");
-  console.log(audios, "audios-----------");
   const { nftHolder } = useContext(CryptoWorldContext);
 
   if (!nftHolder)
