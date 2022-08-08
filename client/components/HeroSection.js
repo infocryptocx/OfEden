@@ -10,21 +10,20 @@ const HeroSection = () => {
           </p>
 
           <p className="mt-2 text-sm text-center px-8 text-gray-500 dark:text-gray-400 lg:text-base">
-            CryptoWorld.Tips Presents: Project Eden. A Web3 Vault hosting the
-            Intellectual Property of CryptoWorld.Tips Accessible only to
-            Holders.
+            A Web3 Vault Housing the Intellectual Property of CryptoWorld.Tips
+            Accessible Only to Holders.
           </p>
 
           <div className="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
             <a
-              href="https://opensea.io"
+              href="https://opensea.io/collection/cryptohoodlumz888?search[sortAscending]=false&search[sortBy]=CREATED_DATE"
               className="block px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform bg-red-900 rounded-md lg:inline hover:bg-zinc-900"
             >
               Buy Our NFT For Access
             </a>
 
             <a
-              href="https://discord.com/invite/7u54vrB3RE"
+              href="https://CryptoWorldDiscord.com"
               className="block ml-3 px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform border-2 border-red-900 rounded-md lg:inline hover:bg-zinc-900"
             >
               Join Our Discord

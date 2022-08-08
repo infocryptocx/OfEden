@@ -11,7 +11,7 @@ const Footer = () => {
 
       <div className="flex -mx-2">
         <a
-          href="https://discord.com/invite/7u54vrB3RE"
+          href="https://CryptoWorldDiscord.com"
           className="mx-2 text-white hover:text-red-900"
           aria-label="discord"
         >
