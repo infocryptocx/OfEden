@@ -6,8 +6,14 @@ import { CryptoWorldContext } from "../context/context";
 import Image from "next/image";
 
 const MainNavbar = () => {
-  const { currentUser, nftHolder, currentAccount, connectWallet, logout } =
-    useContext(CryptoWorldContext);
+  const {
+    currentUser,
+    nftHolder,
+    currentAccount,
+    connectWallet,
+    logout,
+    authenticated,
+  } = useContext(CryptoWorldContext);
 
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
@@ -50,7 +56,7 @@ const MainNavbar = () => {
               "items-center md:flex" + (navbarOpen ? " flex" : " hidden")
             }
           >
-            {currentAccount && nftHolder ? (
+            {currentAccount && authenticated === true ? (
               <div className="flex flex-col md:flex-row items-center">
                 <Link href="/about">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
@@ -226,7 +232,7 @@ const MainNavbar = () => {
             )}
 
             <div className="flex flex-col md:flex-row md:mx-1">
-              {currentAccount && nftHolder ? (
+              {currentAccount && authenticated === true ? (
                 // <div className="mr-5 bg-zinc-900 text-zinc-200 p-1 text-sm rounded-3xl border-2 border-bg-black flex items-center">
                 //   <img src="./eth.png" width={13} alt="ethLogo" />
                 //   <span className="mx-1 text-zinc-700">{"|"}</span>

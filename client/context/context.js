@@ -39,6 +39,7 @@ export const CryptoWorldProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState();
   const [holderStatus, setHolderStatus] = useState("");
   const [nftHolder, setNftHolder] = useState();
+  const [authenticated, setAuthenticated] = useState(false);
 
   const nftaddress = "0x8bfa795dfee69438ddb4e3d41e66159771b4101c";
 
@@ -229,6 +230,8 @@ export const CryptoWorldProvider = ({ children }) => {
     } catch (error) {
       console.error(error);
     }
+
+    setAuthenticated(true);
   };
 
   const logout = async () => {
@@ -265,6 +268,7 @@ export const CryptoWorldProvider = ({ children }) => {
         currentUser,
         nftHolder,
         logout,
+        authenticated,
       }}
     >
       {children}
