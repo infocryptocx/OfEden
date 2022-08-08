@@ -2,7 +2,7 @@
 import { serialize } from "cookie";
 import { sign } from "../../../services/jwt_sign_verify";
 
-const secret = process.env.SECRET || "secret";
+const secret = process.env.SECRET;
 
 export default async function (req, res) {
   const { nftHolder, walletAddress } = req.body;
@@ -12,7 +12,8 @@ export default async function (req, res) {
 
     const serialised = serialize("CryptoWorld", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV !== "development",
+      secure:
+        process.env.NODE_ENV === "development" ? ".localhost" : ".ofedn.io",
       sameSite: "strict",
       maxAge: 60 * 60 * 24 * 30,
       path: "/",

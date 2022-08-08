@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { verify } from "./services/jwt_sign_verify";
 
-const secret = process.env.SECRET || "secret";
+const secret = process.env.SECRET;
 
 export default async function middleware(req) {
   const jwt = req.cookies.get("CryptoWorld");
