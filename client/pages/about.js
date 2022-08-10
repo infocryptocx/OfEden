@@ -109,7 +109,9 @@ const About = () => {
             </li>
             <li className="text-white">
               If Available, Listings Can be Found Here:{" "}
-              <a href="https://cryptohoodlumz.io">Cryptohoodlumz.io</a>
+              <a href="https://opensea.io/collection/cryptohoodlumz888?search[sortAscending]=false&search[sortBy]=CREATED_DATE">
+                Cryptohoodlumz.io
+              </a>
             </li>
             <li className="text-white">Or scanning here: </li>
           </ul>
