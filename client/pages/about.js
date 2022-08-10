@@ -8,7 +8,7 @@ const About = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="bg-black p-6 rounded-lg border-2 border-red-900">
             <h1 className="text-center text-xl font-semibold text-gray-800 dark:text-white">
-              7/1/2022
+              7/2022
             </h1>
             <p className="mt-2 text-3xl text-center text-gray-500 dark:text-gray-400">
               Code Release
@@ -17,7 +17,7 @@ const About = () => {
 
           <div className="bg-black p-6 rounded-lg border-2 border-red-900">
             <h1 className="text-xl text-center font-semibold text-gray-800 dark:text-white">
-              7/22/2022
+              8/2022
             </h1>
             <p className="mt-2 text-3xl  text-center text-gray-500 dark:text-gray-400">
               Beta Access
@@ -26,10 +26,10 @@ const About = () => {
 
           <div className="bg-black p-6 rounded-lg border-2 border-red-900">
             <h1 className="text-center text-xl font-semibold text-gray-800 dark:text-white">
-              8/8/2022
+              9/2022
             </h1>
             <p className="mt-2 text-3xl  text-center text-gray-500 dark:text-gray-400">
-              Open Access
+              Holder Access
             </p>
           </div>
         </div>
@@ -109,8 +109,7 @@ const About = () => {
             </li>
             <li className="text-white">
               If Available, Listings Can be Found Here:{" "}
-              <a href="https://bit.ly/CHZ888">https://bit.ly/CHZ888</a>
-              https://bit.ly/CHZ888
+              <a href="https://cryptohoodlumz.io">Cryptohoodlumz.io</a>
             </li>
             <li className="text-white">Or scanning here: </li>
           </ul>
