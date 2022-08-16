@@ -13,6 +13,9 @@ import video from "./video";
 import audio from "./audio";
 import { userSchema } from "./userSchema";
 import { conversationSchema } from "./conversationSchema";
+import postVine from "./postVine";
+import videoVine from "./videoVine";
+import audioVine from "./audioVine";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,5 +36,8 @@ export default createSchema({
     blockContent,
     userSchema,
     conversationSchema,
+    postVine,
+    videoVine,
+    audioVine,
   ]),
 });
