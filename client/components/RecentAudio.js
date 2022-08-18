@@ -51,6 +51,7 @@ export default function RecentAudios({ audios }) {
 
               <ReactAudioPlayer
                 src={getFileAsset(audio.audio, client.config()).url}
+                controls
                 controlsList="nodownload"
               />
               <div className="mt-4">
