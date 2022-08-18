@@ -17,7 +17,7 @@ function urlFor(source) {
 }
 
 export const getStaticProps = async () => {
-  const query = groq`{"audios": *[_type == 'audio']{title,audio,description,publishedAt,
+  const query = groq`{"audios": *[_type == 'audio']| order(publishedAt desc){title,audio,description,publishedAt,
       'categories': categories[]->title,
       'authorName': author->name,
       'authorSlug': author->slug,
