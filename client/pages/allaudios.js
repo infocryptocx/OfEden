@@ -99,7 +99,7 @@ const AllAudios = ({ audios }) => {
 
                 <ReactAudioPlayer
                   src={getFileAsset(audio.audio, client.config()).url}
-                  controls
+                  controlsList="nodownload"
                 />
                 <div className="mt-4">
                   <div className="flex items-center">
