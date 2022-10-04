@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xB1C2Ea6a4FD79528A97F3957984F17fffC5506E5",
+  "SCAN_LINK": "https://etherscan.io/address/0xb1c2ea6a4fd79528a97f3957984f17fffc5506e5",
+  "NETWORK": {
+    "NAME": "Ethereum",
+    "SYMBOL": "ETH",
+    "ID": 1
+  },
+  "NFT_NAME": "NFDEVS SEASON1 DROP",
+  "SYMBOL": "NFDEVSS1",
+  "MAX_SUPPLY": 100000,
+  "WEI_COST": 0,
+  "DISPLAY_COST": 0.0,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/",
+  "SHOW_BACKGROUND": true
+}
