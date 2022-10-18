@@ -37,7 +37,6 @@ export const CryptoWorldProvider = ({ children }) => {
   const [placeholder, setPlaceholder] = useState("Message...");
   const [messageText, setMessageText] = useState("");
   const [currentUser, setCurrentUser] = useState();
-  const [holderStatus, setHolderStatus] = useState("");
   const [nftHolder, setNftHolder] = useState();
   const [authenticated, setAuthenticated] = useState(false);
 

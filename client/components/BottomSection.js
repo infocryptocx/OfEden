@@ -24,7 +24,7 @@ const BottomSection = () => {
               />
 
               <h1 className="mt-4 text-2xl font-semibold text-red-900 capitalize text-white group-hover:text-white">
-                arthur melo
+                NKECHI KWENU
               </h1>
 
               <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
