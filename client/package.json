@@ -32,8 +32,17 @@
     "react-audio-player": "^0.17.0",
     "react-dom": "18.1.0",
     "react-h5-audio-player": "^3.8.4",
+<<<<<<< HEAD
     "sanity-mux-player": "^0.0.27",
     "wagmi": "^0.7.5"
+=======
+    "react-redux": "^8.0.4",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "sanity-mux-player": "^0.0.27",
+    "web3": "^1.8.0",
+    "web3-eth-contract": "^1.8.0"
+>>>>>>> 58aea00de7685e621201395e4324399ff465d26b
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
