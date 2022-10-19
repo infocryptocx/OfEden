@@ -19,7 +19,7 @@ const HeroSection = () => {
               href="https://opensea.io/collection/cryptohoodlumz888?search[sortAscending]=false&search[sortBy]=CREATED_DATE"
               className="block px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform bg-red-900 rounded-md lg:inline hover:bg-zinc-900"
             >
-              Buy Our NFT For Access
+              Collect Our NFT For Access
             </a>
 
             <a

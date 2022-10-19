@@ -3,7 +3,7 @@ import React from "react";
 const BottomSection = () => {
   return (
     <div>
-      <section className="">
+      {/* <section className="">
         <div className="container px-6 py-10 mx-auto">
           <h1 className="text-3xl font-semibold text-center capitalize lg:text-4xl text-white">
             Our Team
@@ -269,7 +269,7 @@ const BottomSection = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="bg-red-900">
         <div className="py-10">
           <h1 className="text-lg font-semibold text-zinc-300 text-center lg:text-2xl">

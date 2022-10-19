@@ -106,7 +106,7 @@ const MainNavbar = () => {
                           )}
                         </Menu.Item>
                       </div>
-                      <div className="px-1 py-1 ">
+                      {/* <div className="px-1 py-1 ">
                         <Menu.Item>
                           {({ active }) => (
                             <Link href="/allposts">
@@ -122,8 +122,8 @@ const MainNavbar = () => {
                             </Link>
                           )}
                         </Menu.Item>
-                      </div>
-                      <div className="px-1 py-1 ">
+                      </div> */}
+                      {/* <div className="px-1 py-1 ">
                         <Menu.Item>
                           {({ active }) => (
                             <Link href="/allvideos">
@@ -139,20 +139,20 @@ const MainNavbar = () => {
                             </Link>
                           )}
                         </Menu.Item>
-                      </div>
+                      </div> */}
                     </Menu.Items>
                   </Transition>
                 </Menu>
-                <Link href="/members">
+                {/* <Link href="/members">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     Members
                   </a>
-                </Link>
-                <Link href="/community">
+                </Link> */}
+                {/* <Link href="/community">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     Forumz
                   </a>
-                </Link>
+                </Link> */}
 
                 {/* <Link href="/cwsubmissions">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
