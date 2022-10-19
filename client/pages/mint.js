@@ -81,9 +81,6 @@ const unauthorized = () => {
         <p className="text-white text-5xl uppercase my-2 font-bold">
           Unauthorized
         </p>
-        <p className="text-white text-xl font-semibold">
-          Not A Hoodlumz Holder
-        </p>
       </div>
     </MainLayout>
   );
