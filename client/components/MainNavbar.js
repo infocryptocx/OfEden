@@ -58,16 +58,6 @@ const MainNavbar = () => {
           >
             {currentAccount && authenticated === true ? (
               <div className="flex flex-col md:flex-row items-center">
-                <Link href="/about">
-                  <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
-                    About OfEden
-                  </a>
-                </Link>
-                <Link href="/mint">
-                  <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
-                    Marketplace
-                  </a>
-                </Link>
                 {/* <Link href="/cryptohoodlumz">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     CryptoHoodlumz
@@ -143,17 +133,31 @@ const MainNavbar = () => {
                     </Menu.Items>
                   </Transition>
                 </Menu>
-                {/* <Link href="/members">
+                <Link href="/about">
+                  <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
+                    About OfEden
+                  </a>
+                </Link>
+                <Link href="/mint">
+                  <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
+                    Marketplace
+                  </a>
+                </Link>
+                <Link href="/members">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     Members
                   </a>
-                </Link> */}
-                {/* <Link href="/community">
+                </Link>
+                <Link href="/community">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     Forumz
                   </a>
-                </Link> */}
-
+                </Link>
+                <Link href="https://thedailydegen.io/" target="_blank">
+                  <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
+                    TheDailyDegen
+                  </a>
+                </Link>
                 {/* <Link href="/cwsubmissions">
                   <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
                     CW Submissions
