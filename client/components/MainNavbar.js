@@ -153,8 +153,11 @@ const MainNavbar = () => {
                     Forumz
                   </a>
                 </Link>
-                <Link href="https://thedailydegen.io/" target="_blank">
-                  <a className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0">
+                <Link href="https://thedailydegen.io/">
+                  <a
+                    target="_blank"
+                    className="text-sm leading-5 text-gray-300 transition-colors duration-200 transform  hover:text-red-600 dark:hover:text-red-400 hover:underline md:mx-4 md:my-0"
+                  >
                     TheDailyDegen
                   </a>
                 </Link>
