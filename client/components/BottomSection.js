@@ -274,7 +274,7 @@ const BottomSection = () => {
       <section className="bg-red-900">
         <div className="py-10">
           <div className="flex justify-center mt-6">
-            <Link href="https://CryptoWorldDiscord.com">
+            <Link href="https://discord.com/invite/DBDKr3Kafz">
               <a
                 target="_blank"
                 className="block ml-3 px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform border-2 border-zinc-900 rounded-md lg:inline hover:bg-zinc-900"
