@@ -15,21 +15,23 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
-            <a
-              target="_blank"
-              href="https://opensea.io/collection/cryptohoodlumz888?search[sortAscending]=false&search[sortBy]=CREATED_DATE"
-              className="block px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform bg-red-900 rounded-md lg:inline hover:bg-zinc-900"
-            >
-              Collect Our NFT For Access
-            </a>
+            <Link href="https://opensea.io/collection/cryptohoodlumz888?search[sortAscending]=false&search[sortBy]=CREATED_DATE">
+              <a
+                target="_blank"
+                className="block px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform bg-red-900 rounded-md lg:inline hover:bg-zinc-900"
+              >
+                Collect Our NFT For Access
+              </a>
+            </Link>
 
-            <a
-              target="_blank"
-              href="https://CryptoWorldDiscord.com"
-              className="block ml-3 px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform border-2 border-red-900 rounded-md lg:inline hover:bg-zinc-900"
-            >
-              Join Our Discord
-            </a>
+            <Link href="https://CryptoWorldDiscord.com" k>
+              <a
+                target="_blank"
+                className="block ml-3 px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform border-2 border-red-900 rounded-md lg:inline hover:bg-zinc-900"
+              >
+                Join Our Discord
+              </a>
+            </Link>
           </div>
         </div>
       </div>
