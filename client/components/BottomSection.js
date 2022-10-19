@@ -272,24 +272,14 @@ const BottomSection = () => {
       </section> */}
       <section className="bg-red-900">
         <div className="py-10">
-          <h1 className="text-lg font-semibold text-zinc-300 text-center lg:text-2xl">
-          Join the OfEden.888 Allow List to Stay In The Know on Tips, Tutorials, and More.
-          </h1>
-
           <div className="flex justify-center mt-6">
-            <div className="bg-white border rounded-md focus-within:ring dark:bg-zinc-800 dark:border-gray-900 focus-within:border-blue-400 focus-within:ring-blue-300 focus-within:ring-opacity-40 dark:focus-within:border-blue-300">
-              <div className="flex flex-wrap justify-between md:flex-row">
-                <input
-                  type="email"
-                  className="p-2 m-1 text-sm text-gray-700 bg-transparent appearance-none focus:outline-none focus:placeholder-transparent"
-                  placeholder="Enter your email"
-                  aria-label="Enter your email"
-                />
-                <button className="w-full px-3 py-2 m-1 text-sm font-medium tracking-wider text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded-md dark:hover:bg-gray-900 dark:bg-gray-700 lg:w-auto hover:bg-gray-700">
-                I WANT IN
-                </button>
-              </div>
-            </div>
+            <a
+              target="_blank"
+              href="https://CryptoWorldDiscord.com"
+              className="block ml-3 px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform border-2 border-red-900 rounded-md lg:inline hover:bg-zinc-900"
+            >
+              Join Our Discord
+            </a>
           </div>
         </div>
       </section>
