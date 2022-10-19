@@ -277,7 +277,7 @@ const BottomSection = () => {
             <Link href="https://CryptoWorldDiscord.com">
               <a
                 target="_blank"
-                className="block ml-3 px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform border-2 border-red-900 rounded-md lg:inline hover:bg-zinc-900"
+                className="block ml-3 px-4 py-3 font-semibold text-center text-white transition-colors duration-200 transform border-2 border-zinc-900 rounded-md lg:inline hover:bg-zinc-900"
               >
                 Join Our Discord
               </a>
