@@ -26,7 +26,7 @@ const About = () => {
 
           <div className="bg-black p-6 rounded-lg border-2 border-red-900">
             <h1 className="text-center text-xl font-semibold text-gray-800 dark:text-white">
-              9/2022
+              10/2022
             </h1>
             <p className="mt-2 text-3xl  text-center text-gray-500 dark:text-gray-400">
               Holder Access
@@ -108,14 +108,12 @@ const About = () => {
               this time.
             </li>
             <li className="text-white">
-              If Available, Listings Can be Found Here:{" "}
+              If Available, Listings Can be Found By Clicking Here:{" "}
               <a href="https://opensea.io/collection/cryptohoodlumz888?search[sortAscending]=false&search[sortBy]=CREATED_DATE">
                 CryptoHoodlumz888
               </a>
             </li>
-            <li className="text-white">Or scanning here: </li>
           </ul>
-          <img className="w-64 h-64" src="/CHZ888.png" alt="videoChain" />
         </div>
       </div>
     </MainLayout>
