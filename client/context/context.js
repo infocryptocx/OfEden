@@ -40,7 +40,8 @@ export const CryptoWorldProvider = ({ children }) => {
   const [nftHolder, setNftHolder] = useState();
   const [authenticated, setAuthenticated] = useState(false);
 
-  const nftaddress = "0x8bfa795dfee69438ddb4e3d41e66159771b4101c";
+  // const nftaddress = "0x8bfa795dfee69438ddb4e3d41e66159771b4101c";
+  const nftaddress = "0x8bfa795dfee69438ddb4e3d41e66159771b4101cl";
 
   useEffect(() => {
     checkIfWalletIsConnected();
