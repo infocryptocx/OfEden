@@ -62,8 +62,6 @@ const Home = ({ posts, audios, videos }) => {
       </MainLayout>
     );
 
-
-    
   return (
     <MainLayout>
       <div className="min-h-screen">
@@ -109,7 +107,7 @@ const Home = ({ posts, audios, videos }) => {
             Latest Audios
           </h1>
         </div>
-        <RecentAudios audios={audios} />
+        {/* <RecentAudios audios={audios} /> */}
         <hr className="h-px mx-5 my-6 border-none dark:bg-black" />
         {/* <div className="my-10">
           <h1 className="text-3xl font-semibold text-center capitalize lg:text-4xl text-white">
