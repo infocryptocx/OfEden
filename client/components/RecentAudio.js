@@ -52,6 +52,7 @@ export default function RecentAudios({ audios }) {
               <ReactAudioPlayer
                 src={getFileAsset(audio.audio, client.config()).url}
                 controls
+                onContextMenu={(e) => e.preventDefault()}
                 controlsList="nodownload"
               />
               <div className="mt-4">

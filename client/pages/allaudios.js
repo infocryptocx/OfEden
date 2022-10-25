@@ -101,6 +101,7 @@ const AllAudios = ({ audios }) => {
                   src={getFileAsset(audio.audio, client.config()).url}
                   controls
                   controlsList="nodownload"
+                  onContextMenu={(e) => e.preventDefault()}
                 />
                 <div className="mt-4">
                   <div className="flex items-center">
