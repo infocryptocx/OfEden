@@ -40,8 +40,7 @@ export const CryptoWorldProvider = ({ children }) => {
   const [nftHolder, setNftHolder] = useState();
   const [authenticated, setAuthenticated] = useState(false);
 
-  // const nftaddress = "0x8bfa795dfee69438ddb4e3d41e66159771b4101c";
-  const nftaddress = "0x8bfa795dfee69438ddb4e3d41e66159771b4101cl";
+  const nftaddress = "0x8bfa795dfee69438ddb4e3d41e66159771b4101c";
 
   useEffect(() => {
     checkIfWalletIsConnected();
@@ -55,7 +54,7 @@ export const CryptoWorldProvider = ({ children }) => {
   const fetchCurrentAccount = async () => {
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_MAINNET_URL}/getCurrentUserData?account=${currentAccount}`
+        `${process.env.NEXT_PUBLIC_API_URL}/getCurrentUserData?account=${currentAccount}`
       );
 
       const data = await response.json();
@@ -101,7 +100,7 @@ export const CryptoWorldProvider = ({ children }) => {
       };
 
       try {
-        await fetch(`${process.env.NEXT_PUBLIC_MAINNET_URL}/createuser`, {
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/createuser`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -113,7 +112,7 @@ export const CryptoWorldProvider = ({ children }) => {
       }
 
       try {
-        await fetch(`${process.env.NEXT_PUBLIC_MAINNET_URL}/createdm`, {
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/createdm`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -155,7 +154,7 @@ export const CryptoWorldProvider = ({ children }) => {
       };
 
       const userData = await fetch(
-        `${process.env.NEXT_PUBLIC_MAINNET_URL}/auth/connectHolder`,
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/connectHolder`,
         {
           method: "POST",
           headers: {
@@ -203,7 +202,7 @@ export const CryptoWorldProvider = ({ children }) => {
       };
 
       const userData = await fetch(
-        `${process.env.NEXT_PUBLIC_MAINNET_URL}/auth/connectHolder`,
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/connectHolder`,
         {
           method: "POST",
           headers: {
@@ -237,7 +236,7 @@ export const CryptoWorldProvider = ({ children }) => {
   const logout = async () => {
     try {
       const user = await fetch(
-        `${process.env.NEXT_PUBLIC_MAINNET_URL}/auth/logout`,
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/logout`,
         {
           method: "POST",
           headers: {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { client } from "../lib/client";
 import imageUrlBuilder from "@sanity/image-url";
@@ -51,6 +51,12 @@ export default function AllPosts({ posts }) {
 
     setTitle(keyword);
   };
+
+  useEffect(() => {
+    document.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+  }, []);
 
   return (
     <MainLayout>

@@ -56,6 +56,12 @@ const AllAudios = ({ audios }) => {
     setTitle(keyword);
   };
 
+  useEffect(() => {
+    document.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+  }, []);
+
   return (
     <MainLayout>
       <div className="min-h-screen">

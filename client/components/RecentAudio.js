@@ -35,6 +35,11 @@ export const getStaticProps = async () => {
 };
 
 export default function RecentAudios({ audios }) {
+  useEffect(() => {
+    document.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+  }, []);
   return (
     <div className="flex flex-col justify-center">
       <div className="grid grid-cols-2 gap-4 my-10 mx-4 lg:grid-cols-2 xs:grid-cols-1">
@@ -50,9 +55,9 @@ export default function RecentAudios({ audios }) {
               </h2>
 
               <ReactAudioPlayer
+                oncontextmenu="return false;"
                 src={getFileAsset(audio.audio, client.config()).url}
                 controls
-                onContextMenu={(e) => e.preventDefault()}
                 controlsList="nodownload"
               />
               <div className="mt-4">

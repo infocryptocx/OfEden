@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-between px-6 py-4 bg-black sm:flex-row">
-      <a href="#" className="text-lg font-bold text-white hover:text-red-900">
+      <a href="/" className="text-lg font-bold text-white hover:text-red-900">
         OfEden.888
       </a>
 

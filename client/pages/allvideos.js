@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { client } from "../lib/client";
 import groq from "groq";
 import MainLayout from "../components/MainLayout";
@@ -36,6 +36,12 @@ export const getStaticProps = async () => {
 };
 
 const AllVideos = ({ videos }) => {
+  useEffect(() => {
+    document.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+  }, []);
+
   const [title, setTitle] = useState("");
 
   // the search result

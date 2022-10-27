@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { client } from "../lib/client";
 import imageUrlBuilder from "@sanity/image-url";
@@ -13,6 +13,12 @@ function urlFor(source) {
 }
 
 export default function RecentVideos({ videos }) {
+  useEffect(() => {
+    document.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+  }, []);
+
   return (
     <div className="flex flex-col justify-center">
       <div className="grid grid-cols-4 gap-4 my-10 lg:grid-cols-2 xs:grid-cols-1">
